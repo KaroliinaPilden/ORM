@@ -10,14 +10,14 @@
     <table class="w-full table-auto">
         <thead class="font-bold">
             <tr>
-                <td class="px-4 py-2"><a href="?sort=title">Pealkiri</a></td>
-                <td class="px-4 py-2"><a href="?sort=author">Autor</a></td>
-                <td class="px-4 py-2"><a href="?sort=release_date">Aasta</a></td>
-                <td class="px-4 py-2"><a href="?sort=language">Keel</a></td>
-                <td class="px-4 py-2"><a href="?sort=pages">Lehekülgi</a></td>
-                <td class="px-4 py-2"><a href="?sort=price">Hind</a></td>
-                <td class="px-4 py-2"><a href="?sort=stock_saldo">Laoseis</a></td>
-                <td class="px-4 py-2"><a href="?sort=type">Tüüp</a></td>
+                <td class="px-4 py-2"><a href="?sort=title&order={{ $order }}">Pealkiri</a></td>
+                <td class="px-4 py-2"><a href="?sort=author&order={{ $order }}">Autor</a></td>
+                <td class="px-4 py-2"><a href="?sort=release_date&order={{ $order }}">Aasta</a></td>
+                <td class="px-4 py-2"><a href="?sort=language&order={{ $order }}">Keel</a></td>
+                <td class="px-4 py-2"><a href="?sort=pages&order={{ $order }}">Lehekülgi</a></td>
+                <td class="px-4 py-2"><a href="?sort=price&order={{ $order }}">Hind</a></td>
+                <td class="px-4 py-2"><a href="?sort=stock_saldo&order={{ $order }}">Laoseis</a></td>
+                <td class="px-4 py-2"><a href="?sort=type&order={{ $order }}">Tüüp</a></td>
             </tr>
         </thead>
         <tbody class="text-sm">
@@ -35,6 +35,8 @@
         @endforeach
         </tbody>
     </table>
+    <div class="mt-4">
     {{ $books->links() }}
+    </div>
 </body>
 </html>
