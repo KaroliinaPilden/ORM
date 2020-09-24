@@ -19,4 +19,11 @@ class BookController extends Controller
         
         return view('welcome', ['books'=>$books->paginate(20), 'order' => $order]);        
     }
+
+    public function show($book){
+        //get book from database
+        $book = Book::with('author')->find($book);
+        //send book to view
+        return view('show', compact('book'));
+    }
 }
